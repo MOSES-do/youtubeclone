@@ -6,9 +6,9 @@ import { demoProfilePicture } from '../utils/constant'
 
 
 const ChannelCard = ({ channel, marginTop }) => {
-    // console.log(channel);
+    console.log(channel);
     return (
-        <Link to={channel?.id?.channelId ? `/channel/${channel?.id?.channelId}` : demoProfilePicture}>
+        <Link to={channel?.id?.channelId && `/channel/${channel?.id?.channelId}`}>
             <Box sx={{
                 boxShadow: 'none', borderRadius: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center',
                 width: { md: '260px', sm: '250px', xs: '100%' }, height: '326px', margin: 'auto', marginTop
