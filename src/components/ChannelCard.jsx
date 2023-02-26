@@ -5,13 +5,13 @@ import { demoProfilePicture } from '../utils/constant'
 
 
 
-const ChannelCard = ({ channel }) => {
+const ChannelCard = ({ channel, marginTop }) => {
     // console.log(channel);
     return (
-        <Link to={channel?.id?.channelId ? `/channel/${channel?.id?.channelId}` : demoVideoUrl}>
+        <Link to={channel?.id?.channelId ? `/channel/${channel?.id?.channelId}` : demoProfilePicture}>
             <Box sx={{
                 boxShadow: 'none', borderRadius: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center',
-                width: { xs: '356px', md: '320px' }, height: '326px', margin: 'auto'
+                width: { md: '260px', sm: '250px', xs: '100%' }, height: '326px', margin: 'auto', marginTop
             }}>
                 <CardContent sx={{ display: 'flex', flexDirection: "column", justifyContent: "center", textAlign: "center", color: "#fff" }} >
                     <CardMedia
@@ -20,7 +20,7 @@ const ChannelCard = ({ channel }) => {
                         sx={{ width: 180, height: 180, borderRadius: "50%", mb: 2, border: '1px solid #e3e3e3' }}
                     />
                     <Typography variant="h6" fontWeight="normal" color="gray">
-                        {channel?.snippet?.channelTitle}
+                        {channel?.snippet?.title}
                         <CheckCircle sx={{ fontSize: 14, color: 'gray', ml: '5px' }} />
                     </Typography>
                     {channel?.statistics?.subscriberCount && (

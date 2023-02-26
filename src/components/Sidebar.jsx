@@ -7,7 +7,7 @@ import { categories } from "../utils/constant"
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
     return (
-        <Stack direction="row" sx={{ overflowY: "auto", height: { sx: 'auto', md: '95%' }, flexDirection: { md: 'column' } }}>
+        <Stack direction="row" sx={{ overflowY: "auto", height: { sx: 'auto', lg: '95%' }, flexDirection: { lg: 'column' } }}>
 
             {categories.map((category, index) => (
                 <button key={index} onClick={() => setSelectedCategory(category.name)} className="category-btn" style={{ display: 'flex', gap: "10px", color: "white", background: selectedCategory === category.name && '#FC1503' }}>
